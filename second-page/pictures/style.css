@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin+Condensed:wght@400;500;600;700&family=Changa+One:ital@0;1&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../../img/background\ 4.png);
+    background-size: cover;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+h1{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    display: flex;
+    top: 80px;
+    font-size: 60px;
+    font-family: Luckiest Guy;
+    letter-spacing: 2px;
+    color: #f67c98;
+}
+h2{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    display: flex;
+    bottom: 120px;
+    font-size: 30px;
+    font-family: Pacifico;
+    letter-spacing: 2px;
+    color: #f67c98;
+}
+.text img{
+    animation: folder 3s forwards;
+    opacity: 0;
+}
+.text img:nth-child(1){
+    border: 3px #7f7da3 solid;
+    position: absolute;
+    left: 80px;
+    height: 300px;
+    display: flex;
+    transform: rotateZ(-15deg);
+    top: 210px;
+}
+.text img:nth-child(2){
+    border: 3px #7f7da3 solid;
+    position: absolute;
+    display: flex;
+    left: 40%;
+    top: 30%;
+    height: 300px;
+    transform: rotate(5deg);
+    animation-delay: 0.3s;
+}
+.text img:nth-child(3){
+    position: absolute;
+    display: flex;
+    right: 80px;
+    height: 300px;
+    top: 27%;
+    transform: rotate(-8deg);
+    animation-delay: 0.6s;
+}
+@keyframes folder {
+    0% { 
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% { transform: scale(1.1); }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+     }
+}
+.back-button a{
+    position: absolute;
+    border: 4px #f67c98 solid;
+    background-color: #ffb6c1;
+    font-family: pacifico;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin: 30px;
+    padding: 5px;
+    border-radius: 25px;
+    width: 50px;
+    justify-content: center;
+    transition: all ease 0.3s;
+    text-decoration: none;
+    color: #f1f8ff;
+}
+.back-button a:hover{
+    background-color: #f1f8ff;
+    color: #ffb6c1;
+}
+.additional{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    pointer-events: none;
+    bottom: 0;
+}
+.additional img{
+    opacity: 1;
+    animation-delay: 3s;
+    transform: translateX(100vh);
+    animation: hiu 20s infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes hiu{
+    0% {
+        /* Balon muncul dari bawah layar (atau posisi awalnya) */
+        transform: translateX(100vh);
+        opacity: 1;
+    }
+    50% {
+        /* Balon melewati titik tengah dengan ukuran sedikit membesar */
+        transform: translateX(-250vh);
+        opacity: 1;
+    }
+    100% {
+        /* Balon menghilang di atas layar */
+        transform: translateX(-500vh);
+        opacity: 1;
+    }
+}

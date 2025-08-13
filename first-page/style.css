@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin+Condensed:wght@400;500;600;700&family=Changa+One:ital@0;1&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../img/background\ 2.png);
+    background-size: cover;
+    justify-content: end;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.text{
+    height: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 30px;
+    justify-content: center;
+}
+.text a{
+    height: 230px;
+    animation: folder 3s forwards;
+    opacity: 0;
+}
+.text img{
+    transition: all ease 0.3s;
+}
+.text img:hover{
+    transform: scale(1.1);
+}
+.text a:nth-child(2){
+    animation-delay: 0.4s;
+}
+.text a:nth-child(3){
+    animation-delay: 0.8s;
+}
+@keyframes folder {
+    0% { 
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% { transform: scale(1.1); }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+     }
+}
+.element-bottom{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    gap: 40px;
+    margin-bottom: 0;
+
+}
+.element-bottom img{
+    height: 200px;
+    animation: element 15s infinite;
+    animation-delay: 1.5s;
+    transform: translateX(100vh);
+}
+
+@keyframes element {
+    0% {
+        /* Balon muncul dari bawah layar (atau posisi awalnya) */
+        transform: translateX(100vh);
+        opacity: 1;
+    }
+    50% {
+        /* Balon melewati titik tengah dengan ukuran sedikit membesar */
+        transform: translateX(-250vh);
+        opacity: 1;
+    }
+    100% {
+        /* Balon menghilang di atas layar */
+        transform: translateX(-500vh);
+        opacity: 1;
+    }
+}
+.back-button a{
+    position: absolute;
+    border: 4px #f67c98 solid;
+    background-color: #ffb6c1;
+    font-family: pacifico;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin: 30px;
+    padding: 5px;
+    border-radius: 25px;
+    width: 50px;
+    justify-content: center;
+    transition: all ease 0.3s;
+    text-decoration: none;
+    color: #f1f8ff;
+}
+.back-button a:hover{
+    background-color: #f1f8ff;
+    color: #ffb6c1;
+}
+
+.additional{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 55%;
+    pointer-events: none;
+}
+.additional img{
+    opacity: 0;
+    animation-delay: 3s;
+    transform: translateY(100%);
+    animation: balon 15s infinite;
+}
+
+@keyframes balon{
+    0% {
+        /* Balon muncul dari bawah layar (atau posisi awalnya) */
+        transform: translateY(100vh);
+        opacity: 0.5;
+    }
+    50% {
+        /* Balon melewati titik tengah dengan ukuran sedikit membesar */
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        /* Balon menghilang di atas layar */
+        transform: translateY(-200vh);
+        opacity: 0;
+    }
+}
